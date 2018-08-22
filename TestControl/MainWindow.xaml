@@ -8,8 +8,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <ex:FocusableElementHost>
-            <TextBox Width="100" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        </ex:FocusableElementHost>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=" auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Click="Button_Click">test</Button>
+        <ScrollViewer Grid.Row="1" ex:ScrollViewerExtensions.AlwaysScrollToEnd="True">
+            <ListBox x:Name="list">
+            </ListBox>
+        </ScrollViewer>
     </Grid>
 </Window>
